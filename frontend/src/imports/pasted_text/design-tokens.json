@@ -1,0 +1,191 @@
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 DIRECTION ARTISTIQUE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Style : Minimaliste élégant — épuré, moderne, professionnel.
+Inspiration : Linear, Notion, Clerk.
+
+Palette de couleurs :
+* Fond principal : #0F0F13 (noir profond)
+* Surface carte : #1A1A24 (gris anthracite)
+* Bordures : #2E2E3E (gris subtil)
+* Accent principal : #6C63FF (violet électrique)
+* Accent hover : #857DFF
+* Texte principal : #F0F0F5 (blanc cassé)
+* Texte secondaire : #7A7A95 (gris doux)
+* Succès / tâche faite : #22C55E (vert)
+* Danger / suppression : #EF4444 (rouge)
+* Warning / priorité haute : #F59E0B (orange)
+
+Typographie :
+* Titre app "Taskly" : "Syne" Bold — moderne, géométrique
+* Titres de section : "Syne" SemiBold, 20px
+* Corps de texte : "Inter" Regular, 15px
+* Labels / méta : "Inter" Regular, 12px, couleur secondaire
+
+Rayon des boutons et cartes : 12px
+Ombres : subtiles, colorées (box-shadow avec teinte violette à 15% opacité)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 PAGE 1 — INSCRIPTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layout : Centré verticalement et horizontalement, fond #0F0F13.
+
+Carte centrale (480px de large, auto-layout vertical, gap 20px, padding 40px) :
+
+  En-tête de la carte :
+  - Logo "Taskly" avec une icône checkmark stylisée à gauche (couleur #6C63FF)
+  - Titre : "Créer un compte"
+  - Sous-titre : "Commencez à organiser vos tâches dès aujourd'hui"
+
+  Formulaire :
+  - Champ "Prénom" — icône personne à gauche
+  - Champ "Nom" — icône personne à gauche
+  - Champ "Adresse email" — icône mail à gauche
+  - Champ "Mot de passe" — icône cadenas + icône œil à droite (afficher/masquer)
+  - Champ "Confirmer le mot de passe" — même style
+
+  Chaque champ :
+  - Background : #1A1A24
+  - Bordure : 1px solid #2E2E3E
+  - Focus state : bordure 1px solid #6C63FF + légère lueur violette
+  - Height : 48px, border-radius : 10px
+  - Placeholder en couleur secondaire #7A7A95
+
+  Bouton principal :
+  - "S'inscrire" — pleine largeur, background #6C63FF, texte blanc, hauteur 50px
+  - Hover : #857DFF avec légère transition
+
+  Pied de carte :
+  - Texte : "Vous avez déjà un compte ?" + lien "Se connecter" en violet
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 PAGE 2 — CONNEXION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Même structure que la page Inscription, mais :
+
+  - Titre : "Bon retour 👋"
+  - Sous-titre : "Connectez-vous pour accéder à vos tâches"
+
+  Formulaire :
+  - Champ "Adresse email"
+  - Champ "Mot de passe" (avec icône afficher/masquer)
+  - Lien "Mot de passe oublié ?" aligné à droite, couleur violet, taille 12px
+
+  Bouton principal :
+  - "Se connecter"
+
+  Pied de carte :
+  - "Pas encore de compte ?" + lien "S'inscrire" en violet
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 PAGE 3 — TABLEAU DE BORD (page principale)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Layout desktop 1440px — pas de sidebar. Tout sur une seule page.
+
+──────────────────────────────
+HEADER (barre du haut, 64px) :
+──────────────────────────────
+* Gauche : Logo "Taskly" + icône checkmark (couleur #6C63FF)
+* Droite : Avatar cercle avec initiales de l'utilisateur + prénom + bouton 
+  "Déconnexion" (texte rouge discret avec icône logout)
+* Fond header : #1A1A24, bordure bas : 1px solid #2E2E3E
+
+──────────────────────────────
+SECTION HAUT DE PAGE (sous le header, padding 40px) :
+──────────────────────────────
+* Titre : "Mes tâches" (Syne Bold, 28px)
+* Sous-titre : "Gérez vos tâches au même endroit."
+
+* 3 cartes de statistiques côte à côte (flex row, gap 16px) :
+  * "Total" — nombre total de tâches — icône liste
+  * "En cours" — tâches non faites — icône horloge (couleur orange)
+  * "Terminées" — tâches cochées — icône checkmark (couleur vert)
+  Chaque carte : background #1A1A24, bordure #2E2E3E, padding 20px, 
+  border-radius 12px, nombre en grand (24px bold), label en petit (12px)
+
+──────────────────────────────
+SECTION FORMULAIRE + LISTE (même page, layout côte à côte sur desktop) :
+──────────────────────────────
+
+COLONNE GAUCHE — Formulaire de gestion (380px de large) :
+
+  Carte formulaire (background #1A1A24, padding 28px, border-radius 12px) :
+  
+  Titre de la carte : "Ajouter / Modifier une tâche" (16px SemiBold)
+  
+  Champs :
+  - "Intitulé de la tâche" — input texte, pleine largeur
+  - "Date limite" — date picker, icône calendrier à droite
+  - "Priorité" — select/dropdown avec 3 options :
+      🔴 Haute   🟡 Moyenne   🟢 Basse
+      Chaque option avec sa couleur associée
+
+  3 boutons alignés en ligne (flex row, gap 12px) SOUS le formulaire :
+  
+  ┌─────────────┬──────────────┬──────────────┐
+  │  ➕ Ajouter │ ✏️  Modifier │ 🗑️ Supprimer │
+  └─────────────┴──────────────┴──────────────┘
+
+  Bouton Ajouter : background #6C63FF, texte blanc
+  Bouton Modifier : background transparent, bordure #6C63FF, texte #6C63FF
+  Bouton Supprimer : background transparent, bordure #EF4444, texte #EF4444
+  Tous : border-radius 10px, height 44px, flex: 1 (largeur égale)
+
+COLONNE DROITE — Liste des tâches (flex: 1) :
+
+  Barre de filtre (au-dessus de la liste) :
+  - Tabs pills : "Toutes" | "En cours" | "Terminées"
+  - Tab actif : background #6C63FF, texte blanc
+  - Tab inactif : background #1A1A24, texte secondaire
+
+  Liste de tâches (auto-layout vertical, gap 10px) :
+
+  Chaque carte de tâche (background #1A1A24, padding 18px, 
+  border-radius 12px, bordure gauche 3px solid selon priorité) :
+
+    Ligne principale :
+    - Gauche : Checkbox rond (vide = bordure #2E2E3E, coché = fond #22C55E 
+      avec icône check blanc)
+    - Intitulé de la tâche (15px, gras) — barré + couleur secondaire si coché
+    - Droite : Badge priorité coloré (pill : Haute/Moyenne/Basse)
+
+    Ligne secondaire (sous l'intitulé) :
+    - Icône calendrier + date limite (12px, couleur secondaire)
+    - Si date dépassée : texte rouge "En retard"
+
+    La carte sélectionnée (pour modification) :
+    - Bordure complète 1px solid #6C63FF
+    - Légère lueur violette (box-shadow)
+
+  État vide (aucune tâche) :
+  - Illustration simple (icône checklist géante, opacité 20%)
+  - Texte : "Aucune tâche pour l'instant"
+  - Sous-texte : "Ajoutez votre première tâche à gauche ✨"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📱 VERSION MOBILE (375px)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+* Header identique mais compact
+* Stats : scroll horizontal (3 cartes)
+* Formulaire en haut, pleine largeur
+* 3 boutons Ajouter/Modifier/Supprimer en ligne sous le formulaire
+* Liste de tâches en dessous, pleine largeur
+* Tabs de filtre scrollables
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🧩 COMPOSANTS À CRÉER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+* TaskCard (variants : default / selected / completed)
+* InputField (variants : default / focus / error)
+* Button (variants : primary / outline-violet / outline-red)
+* Badge priorité (variants : haute / moyenne / basse)
+* Checkbox (variants : vide / coché)
+* Toast notification (succès / erreur) — coin bas droit
+* Tous en Auto Layout avec Design Tokens définis
